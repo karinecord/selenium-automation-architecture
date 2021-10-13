@@ -11,7 +11,7 @@
   <name>selenium-automation-architecture</name>
 
   <properties>
-    <java.version>16</java.version>
+    <java.version>8</java.version>
     <maven.compiler.target>${java.version}</maven.compiler.target>
     <maven.compiler.source>${java.version}</maven.compiler.source>
 

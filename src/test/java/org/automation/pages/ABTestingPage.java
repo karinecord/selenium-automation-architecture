@@ -6,18 +6,22 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.springframework.beans.factory.annotation.Autowired;
-
 @PageObject
-public class SpringHomePage {
+public class ABTestingPage {
     @Autowired
     WebDriver webDriver;
+
     @Autowired
     TestProperties testProperties;
 
-    @FindBy(id = "hero")
-    public WebElement hero;
+    @FindBy(xpath = "//div[contains(@class, 'example')]/h3")
+    public WebElement testControlHeader;
+
+    @FindBy(xpath = "//div[contains(@class, 'example')]/p")
+    public WebElement testControlContent;
 
     public void visit() {
-        webDriver.get(testProperties.getAppBaseUrl());
+        webDriver.get(testProperties.getAppBaseUrl() + "abtest");
     }
+
 }
