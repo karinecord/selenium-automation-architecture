@@ -83,7 +83,7 @@ public class ChallengingDOM extends BaseTest {
         int buttonsTotal = challengingDOMPage.buttonsList.size();
         // Generates a number between 0 and buttonsTotal-1. Ex. size=3 -> min: 0, max: 2
         // If buttonsTotal is not specified, nextInt can generate a number bigger than the number of items in the buttonsList
-        int buttonIndex = new Random().nextInt();
+        int buttonIndex = new Random().nextInt(buttonsTotal);
 
         challengingDOMPage.clickOnAButtonInTheList(buttonIndex);
 
